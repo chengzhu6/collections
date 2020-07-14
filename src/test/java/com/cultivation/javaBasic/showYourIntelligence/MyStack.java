@@ -2,6 +2,8 @@ package com.cultivation.javaBasic.showYourIntelligence;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.util.Arrays;
+
 @SuppressWarnings({"unused", "FieldCanBeLocal"})
 public class MyStack {
     private int[] storage;
@@ -36,7 +38,8 @@ public class MyStack {
         // TODO: Please create a new array of size newCapacity. And update related fields
         // TODO: You SHOULD NOT USE COLLECTIONS OTHER THAN ARRAY.
         // <--start
-        throw new NotImplementedException();
+        storage = Arrays.copyOf(storage, newCapacity);
+        capacity = newCapacity;
         // --end-->
     }
 

@@ -23,4 +23,13 @@ class ArrayTest {
             array
         );
     }
+
+    @Test
+    void should_could_push_item_when_stack_is_not_full() {
+        final int initialCapacity = 2;
+        MyStack myStack = new MyStack(initialCapacity);
+        myStack.push(1);
+        int[] array = myStack.popToArray();
+        assertArrayEquals(new int[] {1}, array);
+    }
 }
